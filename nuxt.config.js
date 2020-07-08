@@ -16,7 +16,7 @@ export default {
      ** See https://nuxtjs.org/api/configuration-head
      */
     head: {
-        titleTemplate: '%s - ' + process.env.npm_package_name,
+        titleTemplate: 'Glairly',
         title: process.env.npm_package_name || '',
         meta: [
             { charset: 'utf-8' },
@@ -54,7 +54,23 @@ export default {
     /*
      ** Nuxt.js modules
      */
-    modules: [],
+    modules: [
+        [
+            '@nuxtjs/firebase',
+            {
+                config: {
+                    apiKey: 'AIzaSyC7vkTcbp73Qh5O_gZtEKM459aucFGKxmo',
+                    authDomain: '<authDomain>',
+                    databaseURL: '<databaseURL>',
+                    projectId: 'nuxt-js-glairy',
+                    storageBucket: '<storageBucket>',
+                },
+                services: {
+                    auth: true // Just as example. Can be any other service.
+                }
+            }
+        ]
+    ],
     /*
      ** vuetify module configuration
      ** https://github.com/nuxt-community/vuetify-module
@@ -81,4 +97,7 @@ export default {
      ** See https://nuxtjs.org/api/configuration-build/
      */
     build: {},
+
+    serverMiddleware: ['~/server/server.js']
+
 }

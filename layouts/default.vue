@@ -11,7 +11,7 @@
       <v-spacer />
     </v-app-bar>
     <v-main>
-      5555
+      <nuxt />
     </v-main>
     <v-footer :absolute="!fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
