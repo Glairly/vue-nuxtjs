@@ -18,7 +18,7 @@
         "express": "^4.17.1",
         "firebase": "^7.15.5",
         "netlify-lambda": "^1.6.3",
-        "nuxt": "^2.13.0",
+        "nuxt": "^3.4.3",
         "serverless-http": "^2.5.0"
     },
     "devDependencies": {
